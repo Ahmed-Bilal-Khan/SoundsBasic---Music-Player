@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -89,7 +91,38 @@ public class TracksFragment extends Fragment {
                 {
                     items[i] = mysongs.get(i).getName().toString().replace(".mp3","").replace(".wav","");
                 }
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
-                listView1.setAdapter(myAdapter);
+        /*ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
+                listView1.setAdapter(myAdapter);*/
+
+        customListVAdapter customListVAdapter = new customListVAdapter();
+        listView1.setAdapter(customListVAdapter);
+    }
+
+    class customListVAdapter extends BaseAdapter
+    {
+
+        @Override
+        public int getCount() {
+            return items.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View myView = getLayoutInflater().inflate(R.layout.list_item,null);
+            TextView txtsongn = myView.findViewById(R.id.txtvlist_item);
+            txtsongn.setSelected(true);
+            txtsongn.setText(items[position]);
+            return myView;
+        }
     }
 }
