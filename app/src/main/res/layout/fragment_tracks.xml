@@ -2,17 +2,29 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/black"
     android:layout_height="match_parent"
     tools:context=".TracksFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <SearchView
+        android:id="@+id/searchv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SearchViewStyle"
+        android:queryHint="Looking for Songs?"
+        android:layout_margin="5dp"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/customsearchbar"
+        />
+
     <ListView
+        android:layout_marginTop="60dp"
+        android:id="@+id/listvsongs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listvsongs"
         android:divider="@color/trans"
         android:dividerHeight="10sp"
-        android:padding="10dp"
-        />
+        android:padding="10dp" />
 
 </FrameLayout>
