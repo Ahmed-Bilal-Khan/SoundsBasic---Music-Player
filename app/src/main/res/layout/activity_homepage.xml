@@ -39,8 +39,8 @@
         >
         <ImageView
             android:id="@+id/settingsimgvgrey"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/settingsicongrey"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
@@ -48,27 +48,28 @@
             />
         <ImageView
             android:id="@+id/addimgvgrey"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/addicongrey"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="320dp"
 
             android:clickable="true"
             />
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <!--145-->
+      <!--  <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/searchimgvgrey"
             android:background="@drawable/searchicongrey"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="145dp"
             android:clickable="true"
-            />
+            /> -->
 
     </LinearLayout>
     <LinearLayout
-        
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"

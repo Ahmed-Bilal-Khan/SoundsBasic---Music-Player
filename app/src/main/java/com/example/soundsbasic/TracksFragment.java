@@ -7,11 +7,15 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.karumi.dexter.Dexter;
@@ -27,19 +31,35 @@ import java.util.ArrayList;
 public class TracksFragment extends Fragment {
     ListView listView1;
     String[] items;
+    SearchView searchView1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_tracks,container,false);
         listView1 = view.findViewById(R.id.listvsongs);
         runtimePermission();
+        searchView1 = view.findViewById(R.id.searchv1);
+        /*searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                TracksFragment.this.customListVAdapter.getFilter.filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                TracksFragment.this.customListVAdapter.getFilter.filter(newText);
+                return false;
+            }
+        });*/
         return view;
     }
 
