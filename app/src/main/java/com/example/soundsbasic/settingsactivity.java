@@ -28,7 +28,7 @@ public class settingsactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settingsactivity);
         getSupportActionBar().setTitle("Settings");
-        getSupportActionBar().setLogo(R.drawable.settingsiconred);
+        getSupportActionBar().setIcon(R.drawable.settingsiconred);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerViewsettings = findViewById(R.id.settingsrecycle);
