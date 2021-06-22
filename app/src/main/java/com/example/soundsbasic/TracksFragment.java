@@ -1,6 +1,7 @@
 package com.example.soundsbasic;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -114,6 +116,17 @@ public class TracksFragment extends Fragment {
 
         customListVAdapter customListVAdapter = new customListVAdapter();
         listView1.setAdapter(customListVAdapter);
+
+        listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String songName = (String) listView1.getItemAtPosition(position);
+                startActivity(new Intent(getActivity(), play_screen.class)
+                .putExtra("songs", mysongs)
+                .putExtra("songname", songName)
+                .putExtra("pos", position));
+            }
+        });
     }
 
     class customListVAdapter extends BaseAdapter
