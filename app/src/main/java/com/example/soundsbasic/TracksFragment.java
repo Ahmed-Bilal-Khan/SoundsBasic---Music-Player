@@ -30,14 +30,12 @@ import java.util.ArrayList;
 
 public class TracksFragment extends Fragment {
     ListView listView1;
-    String[] items;
+    static String[] items;
     SearchView searchView1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -46,17 +44,17 @@ public class TracksFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tracks,container,false);
         listView1 = view.findViewById(R.id.listvsongs);
         runtimePermission();
-        searchView1 = view.findViewById(R.id.searchv1);
-        /*searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        /*searchView1 = view.findViewById(R.id.searchv1);
+        searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                TracksFragment.this.customListVAdapter.getFilter.filter(query);
+                TracksFragment.customListVAdapter.getFilter().filter(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                TracksFragment.this.customListVAdapter.getFilter.filter(newText);
+                TracksFragment.customListVAdapter.getFilter().filter(newText);
                 return false;
             }
         });*/

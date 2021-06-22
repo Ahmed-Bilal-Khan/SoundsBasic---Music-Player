@@ -3,9 +3,11 @@ package com.example.soundsbasic;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -13,6 +15,7 @@ import com.karumi.dexter.Dexter;
 
 public class homepage extends AppCompatActivity {
     TextView txttracks,txtplaylists;
+    ImageView imgvsettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,15 @@ public class homepage extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.containersongs,new TracksFragment()).commit();
         txttracks = findViewById(R.id.trackstxtv);
         txtplaylists = findViewById(R.id.playlisttxtv);
+        imgvsettings = findViewById(R.id.settingsimgvgrey);
+
+        imgvsettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    startActivity(new Intent(getApplicationContext(), settingsactivity.class));
+            }
+        });
+
         txtplaylists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
