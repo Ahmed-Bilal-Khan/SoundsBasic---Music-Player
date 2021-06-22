@@ -1,5 +1,6 @@
 package com.example.soundsbasic;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
@@ -10,6 +11,8 @@ import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -35,6 +38,27 @@ public class play_screen extends AppCompatActivity {
     LinearLayout musiclinearlayout;
     Animation fadein;
     String sname;
+    Thread updateseekbar;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==android.R.id.home)
+        {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //visualizer not running when no music plays ka check
+    @Override
+    protected void onDestroy() {
+        if (visualizer != null)
+        {
+            visualizer.release();
+        }
+        super.onDestroy();
+    }
+
     public static final String EXTRA_NAME = "song_name";
     static MediaPlayer mediaPlayer;
     int positionn;
@@ -44,7 +68,7 @@ public class play_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
-        getSupportActionBar().setTitle("Music Player");
+        getSupportActionBar().setTitle("Now Playing");
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         musiclinearlayout = findViewById(R.id.linearlayoutplayer);
@@ -83,6 +107,69 @@ public class play_screen extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
         mediaPlayer.start();
 
+        updateseekbar = new Thread()
+        {
+            @Override
+            public void run() {
+                int totalDuration = mediaPlayer.getDuration();
+                int currentpostion = 0;
+
+                while (currentpostion<totalDuration)
+                {
+                    try {
+                        sleep(500);
+                        currentpostion = mediaPlayer.getCurrentPosition();
+                        seekmusic.setProgress(currentpostion);
+                    }
+                    catch (InterruptedException | IllegalStateException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+        seekmusic.setMax(mediaPlayer.getDuration());
+        updateseekbar.start();
+        //color change baad me karta seekbar ka
+
+
+
+
+
+        //seekbarchange when user moves it
+        seekmusic.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                mediaPlayer.seekTo(seekBar.getProgress());
+            }
+        });
+
+        String endTime = createTime(mediaPlayer.getDuration());
+        txtsstop.setText(endTime);
+
+        final Handler handler = new Handler();
+        final int delay = 1000;
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                String currentTime = createTime(mediaPlayer.getCurrentPosition());
+                txtsstart.setText(currentTime);
+                handler.postDelayed(this, delay);
+            }
+        }, delay);
+
+
         btnplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +199,11 @@ public class play_screen extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
                 startAnimation(imageView);
+                int audiosessionID = mediaPlayer.getAudioSessionId();
+                if (audiosessionID != -1)
+                {
+                    visualizer.setAudioSessionId(audiosessionID);
+                }
             }
         });
 
@@ -129,6 +221,11 @@ public class play_screen extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
                 startAnimation(imageView);
+                int audiosessionID = mediaPlayer.getAudioSessionId();
+                if (audiosessionID != -1)
+                {
+                    visualizer.setAudioSessionId(audiosessionID);
+                }
             }
         });
 
@@ -137,6 +234,32 @@ public class play_screen extends AppCompatActivity {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 btnnext.performClick();
+            }
+        });
+
+        int audiosessionID = mediaPlayer.getAudioSessionId();
+        if (audiosessionID != -1)
+        {
+            visualizer.setAudioSessionId(audiosessionID);
+        }
+
+        btnff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mediaPlayer.isPlaying())
+                {
+                    mediaPlayer.seekTo(mediaPlayer.getCurrentPosition()+5000);
+                }
+            }
+        });
+
+        btnfr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mediaPlayer.isPlaying())
+                {
+                    mediaPlayer.seekTo(mediaPlayer.getCurrentPosition()-5000);
+                }
             }
         });
     }
@@ -150,4 +273,21 @@ public class play_screen extends AppCompatActivity {
         animatorSet.start();
     }
 
+    //Converting time from milli secs to minutes and secs ftn
+    public String createTime(int duration)
+    {
+        String time = "";
+        int min = duration/1000/60;
+        int sec = duration/1000%60;
+
+        time+=min+":";
+
+        if (sec<10)
+        {
+            time+="0";
+        }
+        time+=sec;
+
+        return time;
+    }
 }
