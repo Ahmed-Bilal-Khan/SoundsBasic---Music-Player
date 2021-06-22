@@ -7,6 +7,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
 import android.net.Uri;
@@ -130,7 +131,8 @@ public class play_screen extends AppCompatActivity {
         };
         seekmusic.setMax(mediaPlayer.getDuration());
         updateseekbar.start();
-        //color change baad me karta seekbar ka
+        seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.logored), PorterDuff.Mode.MULTIPLY);
+        seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.logored), PorterDuff.Mode.SRC_IN);
 
 
 
