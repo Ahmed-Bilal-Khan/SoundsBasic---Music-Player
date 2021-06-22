@@ -85,7 +85,7 @@
         android:text="Tracks"
         android:textSize="20dp"
         android:textColor="@color/grey"
-        android:layout_weight="1.5"
+        android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"
         />
@@ -98,7 +98,19 @@
             android:clickable="true"
             android:textSize="20dp"
             android:layout_gravity="center"
-            android:layout_weight="1.5"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/favortxtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:textColor="@color/grey"
+            android:clickable="true"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
             />
     </LinearLayout>

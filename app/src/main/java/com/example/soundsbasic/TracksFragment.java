@@ -127,6 +127,19 @@ public class TracksFragment extends Fragment {
                 .putExtra("pos", position));
             }
         });
+
+       /* listView1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+                String mysong = mysongs.get(position).toString();
+                bundle.putString("song",mysong);
+                FavoritesFragment favoritesFragment = new FavoritesFragment();
+                favoritesFragment.setArguments(bundle);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containersongs,favoritesFragment).commit();
+                return false;
+            }
+        });*/
     }
 
     class customListVAdapter extends BaseAdapter

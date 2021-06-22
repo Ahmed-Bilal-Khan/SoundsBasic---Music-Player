@@ -1,10 +1,12 @@
 package com.example.soundsbasic.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,14 +20,16 @@ import java.util.List;
 public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.ViewHolder> {
     Context context;
     List<Settings>settingsList;
+   /* private RecyclerViewOnClickListener listener;*/
 
     public SettingsRAdapter() {
 
     }
 
-    public SettingsRAdapter(Context context, List<Settings> settingsList) {
+    public SettingsRAdapter(Context context, List<Settings> settingsList /*,RecyclerViewOnClickListener listener*/) {
         this.context = context;
         this.settingsList = settingsList;
+     /*   this.listener = listener;*/
     }
 
     @NonNull
@@ -41,6 +45,7 @@ public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.View
         String itemname = settingsList.get(position).getItemname1();
         String itemname1 = settingsList.get(position).getItemname2();
         holder.setData(resource,itemname,itemname1);
+
     }
 
     @Override
@@ -48,7 +53,13 @@ public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.View
         return settingsList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    /*public interface RecyclerViewOnClickListener
+    {
+        void OnClick(View v,int position);
+    }*/
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        RelativeLayout parentlayout;
         TextView txtvsettingsitem,txtvsettingsitem2;
         ImageView imgvlogo;
         public ViewHolder(@NonNull View itemView) {
@@ -56,12 +67,19 @@ public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.View
             txtvsettingsitem = itemView.findViewById(R.id.itemsettingstxtv);
             txtvsettingsitem2 = itemView.findViewById(R.id.itemsettingstxtv2);
             imgvlogo = itemView.findViewById(R.id.imgvsettingitem);
+            parentlayout = itemView.findViewById(R.id.relativesettings);
+            itemView.setOnClickListener(this);
         }
 
         public void setData(int resource, String itemname1,String itemname2) {
             imgvlogo.setImageResource(resource);
             txtvsettingsitem.setText(itemname1);
             txtvsettingsitem2.setText(itemname2);
+        }
+
+        @Override
+        public void onClick(View v) {
+            /*listener.OnClick(itemView, getAdapterPosition());*/
         }
     }
 }

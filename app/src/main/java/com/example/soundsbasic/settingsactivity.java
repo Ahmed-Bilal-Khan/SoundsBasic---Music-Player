@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
@@ -18,6 +20,7 @@ public class settingsactivity extends AppCompatActivity {
     RecyclerView recyclerViewsettings;
     LinearLayoutManager layoutManager;
     SettingsRAdapter settingsRAdapter;
+    /*SettingsRAdapter.RecyclerViewOnClickListener listener;*/
     List<Settings> settingsList = new ArrayList<>();
 
     @Override
@@ -31,6 +34,13 @@ public class settingsactivity extends AppCompatActivity {
         recyclerViewsettings = findViewById(R.id.settingsrecycle);
         settingsList.add(new Settings(R.drawable.abouticon,"FAQ","Need Help?"));
         settingsList.add(new Settings(R.drawable.aboutlogo,"About","SoundsBasic 1.0"));
+        /*listener = new SettingsRAdapter.RecyclerViewOnClickListener() {
+            @Override
+            public void OnClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), faqactitvity.class);
+                startActivity(intent);
+            }
+        };*/
         settingsRAdapter = new SettingsRAdapter(settingsactivity.this,settingsList);
         recyclerViewsettings.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewsettings.setAdapter(settingsRAdapter);

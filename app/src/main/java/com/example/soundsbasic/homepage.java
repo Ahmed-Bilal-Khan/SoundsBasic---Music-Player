@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.karumi.dexter.Dexter;
 
 public class homepage extends AppCompatActivity {
-    TextView txttracks,txtplaylists;
+    TextView txttracks,txtplaylists,txtfavorites;
     ImageView imgvsettings;
 
     @Override
@@ -26,6 +26,7 @@ public class homepage extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.containersongs,new TracksFragment()).commit();
         txttracks = findViewById(R.id.trackstxtv);
         txtplaylists = findViewById(R.id.playlisttxtv);
+        txtfavorites = findViewById(R.id.favortxtv);
         imgvsettings = findViewById(R.id.settingsimgvgrey);
 
         imgvsettings.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +42,14 @@ public class homepage extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.containersongs,new PlaylistFragment()).commit();
             }
         });
+
+        txtfavorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.containersongs,new FavoritesFragment()).commit();
+            }
+        });
+
         txttracks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

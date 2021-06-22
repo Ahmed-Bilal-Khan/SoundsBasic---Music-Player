@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <TextView
+        android:id="@+id/faqtxtv1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- How is the Playlists stored?"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/faqtxtv2"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BlackPlayer always tries its best to keep a backup of your Playlists as .m3ubackup files stored in the BlackPlayer/Playlists folder.
+If you are using the 'Build in Android library' the Playlists are stored in a database on your phone, which your phone manages.
+If you are using 'BlackPlayer Custom Library', the playlists are stored in the app. If you clear the App-data of BlackPlayer these playlists might be lost if there is no external m3u playlist file or m3uBackup file.
+Check which Audio library you are using in Metadata Settings category."
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        />
+
+</LinearLayout>
