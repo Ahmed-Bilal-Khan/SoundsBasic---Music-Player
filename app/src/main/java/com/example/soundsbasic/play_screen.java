@@ -23,14 +23,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gauravk.audiovisualizer.visualizer.BarVisualizer;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
+
+import static com.example.soundsbasic.TracksFragment.shuffleboolean;
 
 public class play_screen extends AppCompatActivity {
-    Button btnplay, btnnext, btnprev, btnff, btnfr;
+    Button btnplay, btnnext, btnprev, btnff, btnfr , btnshuffle;
     TextView txtsname, txtsstart, txtsstop;
     SeekBar seekmusic;
     BarVisualizer visualizer;
@@ -78,6 +82,7 @@ public class play_screen extends AppCompatActivity {
         btnplay = findViewById(R.id.playButton);
         btnff = findViewById(R.id.BtnFastfwd);
         btnfr = findViewById(R.id.BtnFastrev);
+        btnshuffle = findViewById(R.id.btnshuffle);
         txtsname = findViewById(R.id.playscrn_txt);
         txtsstart = findViewById(R.id.txtsstart);
         txtsstop = findViewById(R.id.txtsstop);
@@ -153,6 +158,24 @@ public class play_screen extends AppCompatActivity {
             }
         });
 
+        btnshuffle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(shuffleboolean)
+                {
+                    shuffleboolean = false;
+                    Toast.makeText(getApplicationContext(),"Shuffle is OFF",Toast.LENGTH_LONG).show();
+                    btnshuffle.setBackgroundResource(R.drawable.shuffleiconoff);
+                }
+                else
+                {
+                    shuffleboolean = true;
+                    Toast.makeText(getApplicationContext(),"Shuffle is ON",Toast.LENGTH_LONG).show();
+                    btnshuffle.setBackgroundResource(R.drawable.shuffle_icon);
+                }
+            }
+        });
+
         String endTime = createTime(mediaPlayer.getDuration());
         txtsstop.setText(endTime);
 
@@ -190,7 +213,15 @@ public class play_screen extends AppCompatActivity {
             public void onClick(View v) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                positionn = ((positionn+1)%mySongs.size());
+
+                if(shuffleboolean)
+                {
+                    positionn = getRandom(mySongs.size()-1);
+                }
+
+                else {
+                    positionn = ((positionn + 1) % mySongs.size());
+                }
                 Uri u = Uri.parse(mySongs.get(positionn).toString());
                 mediaPlayer = MediaPlayer.create(getApplicationContext(), u);
                 sname = mySongs.get(positionn).getName();
@@ -205,14 +236,29 @@ public class play_screen extends AppCompatActivity {
                     visualizer.setAudioSessionId(audiosessionID);
                 }
             }
+            private int getRandom(int i)
+            {
+                Random random = new Random();
+                return random.nextInt(i+1);
+            }
+
         });
+
+
 
         btnprev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
-                positionn = ((positionn - 1)<0)?(mySongs.size()-1):(positionn-1);
+                if(shuffleboolean)
+                {
+                    positionn = getRandom(mySongs.size()-1);
+                }
+
+                else {
+                    positionn = ((positionn - 1)<0)?(mySongs.size()-1):(positionn-1);
+                }
                 Uri u = Uri.parse(mySongs.get(positionn).toString());
                 mediaPlayer = MediaPlayer.create(getApplicationContext(), u);
                 sname = mySongs.get(positionn).getName();
@@ -226,6 +272,11 @@ public class play_screen extends AppCompatActivity {
                 {
                     visualizer.setAudioSessionId(audiosessionID);
                 }
+            }
+            private int getRandom(int i)
+            {
+                Random random = new Random();
+                return random.nextInt(i+1);
             }
         });
 

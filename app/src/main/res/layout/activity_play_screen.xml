@@ -144,6 +144,15 @@
                 android:backgroundTint="@color/grey"
                 android:background="@drawable/ic_fast_rewind"
                 />
+            <Button
+                android:id="@+id/btnshuffle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/playButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shuffleiconoff"
+                />
             <com.gauravk.audiovisualizer.visualizer.BarVisualizer
                 xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/blast"

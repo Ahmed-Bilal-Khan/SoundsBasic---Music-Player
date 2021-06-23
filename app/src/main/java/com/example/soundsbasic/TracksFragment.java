@@ -37,6 +37,7 @@ public class TracksFragment extends Fragment {
     ListView listView1;
     static String[] items;
     SearchView searchView1;
+    static boolean shuffleboolean = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
