@@ -34,7 +34,7 @@ import java.util.Random;
 import static com.example.soundsbasic.TracksFragment.shuffleboolean;
 
 public class play_screen extends AppCompatActivity {
-    Button btnplay, btnnext, btnprev, btnff, btnfr , btnshuffle;
+    Button btnplay, btnnext, btnprev, btnff, btnfr , btnshuffle, btnRepeat;
     TextView txtsname, txtsstart, txtsstop;
     SeekBar seekmusic;
     BarVisualizer visualizer;
@@ -89,6 +89,7 @@ public class play_screen extends AppCompatActivity {
         seekmusic = findViewById(R.id.seekbar);
         visualizer = findViewById(R.id.blast);
         imageView = findViewById(R.id.playscrn_img);
+        btnRepeat = findViewById(R.id.BtnRepeat);
 
         fadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fazein);
         musiclinearlayout.setAnimation(fadein);
@@ -315,6 +316,8 @@ public class play_screen extends AppCompatActivity {
         });
     }
 
+
+
   /*  public void startAnimation(View view)
     {
         @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animator = ObjectAnimator.ofFloat(imageView, "rotation, 0f,360f");
@@ -340,5 +343,8 @@ public class play_screen extends AppCompatActivity {
         time+=sec;
 
         return time;
+    }
+
+    public void repeatsong(View view) {
     }
 }

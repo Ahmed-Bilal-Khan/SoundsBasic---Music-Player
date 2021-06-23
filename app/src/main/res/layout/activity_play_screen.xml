@@ -153,6 +153,20 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/shuffleiconoff"
                 />
+            <Button
+                android:id="@+id/BtnRepeat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/BtnNext"
+                android:layout_toRightOf="@id/btnshuffle"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/repeat_vector"
+                android:onClick="repeatsong"
+                />
+
+
             <com.gauravk.audiovisualizer.visualizer.BarVisualizer
                 xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/blast"
