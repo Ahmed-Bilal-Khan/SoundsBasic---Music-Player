@@ -112,7 +112,6 @@ public class play_screen extends AppCompatActivity {
         Uri uri = Uri.parse(mySongs.get(positionn).toString());
         sname = mySongs.get(positionn).getName();
         txtsname.setText(sname);
-
         mediaPlayer = MediaPlayer.create(getApplicationContext(), uri);
         mediaPlayer.start();
 
@@ -291,8 +290,9 @@ public class play_screen extends AppCompatActivity {
                 if (repeatflag){
                     btnplay.performClick();
                     Toast.makeText(getApplicationContext(),"Playing Again",Toast.LENGTH_LONG).show();
-
-                } else {
+                }
+                else
+                    {
                     btnnext.performClick();
                 }
 
