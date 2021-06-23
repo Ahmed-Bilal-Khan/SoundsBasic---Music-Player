@@ -148,9 +148,9 @@
                 android:id="@+id/btnshuffle"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_below="@+id/playButton"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/BtnPrev"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shuffleiconoff"
                 />
             <Button
@@ -161,7 +161,7 @@
                 android:layout_toRightOf="@id/btnshuffle"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="100dp"
                 android:background="@drawable/repeat_vector"
                 android:onClick="repeatsong"
                 />
