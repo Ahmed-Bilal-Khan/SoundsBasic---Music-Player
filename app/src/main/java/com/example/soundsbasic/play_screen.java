@@ -290,6 +290,7 @@ public class play_screen extends AppCompatActivity {
 
                 if (repeatflag){
                     btnplay.performClick();
+                    Toast.makeText(getApplicationContext(),"Playing Again",Toast.LENGTH_LONG).show();
 
                 } else {
                     btnnext.performClick();
@@ -358,11 +359,13 @@ public class play_screen extends AppCompatActivity {
         if (repeatflag){
 
             btnRepeat.setBackgroundResource(R.drawable.repeat_vector);
+            Toast.makeText(getApplicationContext(),"Repeat OFF",Toast.LENGTH_LONG).show();
 
         }
         else
             {
                 btnRepeat.setBackgroundResource(R.drawable.repeat_on);
+                Toast.makeText(getApplicationContext(),"Repeat ON",Toast.LENGTH_LONG).show();
 
         }
         repeatflag = !repeatflag;
