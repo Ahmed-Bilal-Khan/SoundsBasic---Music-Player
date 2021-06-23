@@ -129,14 +129,11 @@ public class play_screen extends AppCompatActivity {
                 }
             }
         };
+
         seekmusic.setMax(mediaPlayer.getDuration());
         updateseekbar.start();
         seekmusic.getProgressDrawable().setColorFilter(getResources().getColor(R.color.logored), PorterDuff.Mode.MULTIPLY);
         seekmusic.getThumb().setColorFilter(getResources().getColor(R.color.logored), PorterDuff.Mode.SRC_IN);
-
-
-
-
 
         //seekbarchange when user moves it
         seekmusic.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -200,7 +197,8 @@ public class play_screen extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
-                startAnimation(imageView);
+                //startAnimation(imageView);
+
                 int audiosessionID = mediaPlayer.getAudioSessionId();
                 if (audiosessionID != -1)
                 {
@@ -215,14 +213,14 @@ public class play_screen extends AppCompatActivity {
                 mediaPlayer.stop();
                 mediaPlayer.release();
                 positionn = ((positionn - 1)<0)?(mySongs.size()-1):(positionn-1);
-
                 Uri u = Uri.parse(mySongs.get(positionn).toString());
                 mediaPlayer = MediaPlayer.create(getApplicationContext(), u);
                 sname = mySongs.get(positionn).getName();
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
-                startAnimation(imageView);
+                //startAnimation(imageView);
+
                 int audiosessionID = mediaPlayer.getAudioSessionId();
                 if (audiosessionID != -1)
                 {
@@ -266,14 +264,14 @@ public class play_screen extends AppCompatActivity {
         });
     }
 
-    public void startAnimation(View view)
+  /*  public void startAnimation(View view)
     {
         @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animator = ObjectAnimator.ofFloat(imageView, "rotation, 0f,360f");
         animator.setDuration(1000);
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(animator);
         animatorSet.start();
-    }
+    } */
 
     //Converting time from milli secs to minutes and secs ftn
     public String createTime(int duration)
