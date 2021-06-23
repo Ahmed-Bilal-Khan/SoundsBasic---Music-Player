@@ -45,6 +45,8 @@ public class play_screen extends AppCompatActivity {
     String sname;
     Thread updateseekbar;
 
+    Boolean repeatflag = false;
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId()==android.R.id.home)
@@ -285,7 +287,14 @@ public class play_screen extends AppCompatActivity {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                btnnext.performClick();
+
+                if (repeatflag){
+                    btnplay.performClick();
+
+                } else {
+                    btnnext.performClick();
+                }
+
             }
         });
 
@@ -346,5 +355,16 @@ public class play_screen extends AppCompatActivity {
     }
 
     public void repeatsong(View view) {
+        if (repeatflag){
+
+            btnRepeat.setBackgroundResource(R.drawable.repeat_vector);
+
+        }
+        else
+            {
+                btnRepeat.setBackgroundResource(R.drawable.repeat_on);
+
+        }
+        repeatflag = !repeatflag;
     }
 }
