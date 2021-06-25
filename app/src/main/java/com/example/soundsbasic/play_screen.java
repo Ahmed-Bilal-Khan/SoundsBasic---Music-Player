@@ -34,9 +34,10 @@ import java.util.Random;
 import static com.example.soundsbasic.TracksFragment.shuffleboolean;
 
 public class play_screen extends AppCompatActivity {
-    Button btnplay, btnnext, btnprev, btnff, btnfr , btnshuffle, btnRepeat;
+    ImageView btnnext, btnprev, btnff, btnfr , btnshuffle, btnRepeat;
     TextView txtsname, txtsstart, txtsstop;
     SeekBar seekmusic;
+    Button btnplay;
     BarVisualizer visualizer;
     ImageView imageView;
 
@@ -167,13 +168,13 @@ public class play_screen extends AppCompatActivity {
                 {
                     shuffleboolean = false;
                     Toast.makeText(getApplicationContext(),"Shuffle is OFF",Toast.LENGTH_LONG).show();
-                    btnshuffle.setBackgroundResource(R.drawable.shuffleiconoff);
+                    btnshuffle.setImageResource(R.drawable.shuffleiconoff);
                 }
                 else
                 {
                     shuffleboolean = true;
                     Toast.makeText(getApplicationContext(),"Shuffle is ON",Toast.LENGTH_LONG).show();
-                    btnshuffle.setBackgroundResource(R.drawable.shuffle_icon);
+                    btnshuffle.setImageResource(R.drawable.shuffle_icon);
                 }
             }
         });
@@ -358,13 +359,13 @@ public class play_screen extends AppCompatActivity {
     public void repeatsong(View view) {
         if (repeatflag){
 
-            btnRepeat.setBackgroundResource(R.drawable.repeat_vector);
+            btnRepeat.setImageResource(R.drawable.repeat_vector);
             Toast.makeText(getApplicationContext(),"Repeat OFF",Toast.LENGTH_LONG).show();
 
         }
         else
             {
-                btnRepeat.setBackgroundResource(R.drawable.repeat_on);
+                btnRepeat.setImageResource(R.drawable.repeat_on);
                 Toast.makeText(getApplicationContext(),"Repeat ON",Toast.LENGTH_LONG).show();
 
         }

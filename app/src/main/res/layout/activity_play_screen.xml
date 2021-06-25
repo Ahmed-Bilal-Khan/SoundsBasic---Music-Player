@@ -98,62 +98,63 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:backgroundTint="@color/logored"
+
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/pause_icon"
                 />
 
-            <Button
+            <ImageView
                 android:id="@+id/BtnNext"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_toRightOf="@id/playButton"
                 android:layout_marginTop="15dp"
-                android:backgroundTint="@color/grey"
+                android:clickable="true"
                 android:background="@drawable/ic_next"
                 />
 
-            <Button
+            <ImageView
                 android:id="@+id/BtnPrev"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_toLeftOf="@id/playButton"
                 android:layout_marginTop="15dp"
-                android:backgroundTint="@color/grey"
+                android:clickable="true"
                 android:background="@drawable/ic_previous"
                 />
 
-            <Button
+            <ImageView
                 android:id="@+id/BtnFastfwd"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_toRightOf="@id/BtnNext"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/grey"
+                android:clickable="true"
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/ic_fast_forward"
                 />
 
-            <Button
+            <ImageView
                 android:id="@+id/BtnFastrev"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_toLeftOf="@id/BtnPrev"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
-                android:backgroundTint="@color/grey"
+                android:clickable="true"
                 android:background="@drawable/ic_fast_rewind"
                 />
-            <Button
+            <ImageView
                 android:id="@+id/btnshuffle"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_below="@+id/BtnPrev"
                 android:layout_marginLeft="120dp"
                 android:layout_marginTop="20dp"
+                android:clickable="true"
                 android:background="@drawable/shuffleiconoff"
                 />
-            <Button
+            <ImageView
                 android:id="@+id/BtnRepeat"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -162,6 +163,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="95dp"
+                android:clickable="true"
                 android:background="@drawable/repeat_vector"
                 android:onClick="repeatsong"
                 />
