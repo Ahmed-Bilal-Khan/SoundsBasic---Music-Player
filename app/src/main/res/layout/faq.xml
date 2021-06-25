@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soundsbasicbg1"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAQ's"
+        android:textColor="@color/logored"
+        android:layout_marginTop="30dp"
+        android:textSize="50dp"
+        android:layout_marginLeft="140dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="◯ How do I play/pause a song?\nANS: Click on the song you want to play from the list of songs you are shownfrom your device. to pause it simply press ⏸️ and to play again just press ▶️."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="◯ How do I shuffle?\nANS: Click on the 🔀 button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="◯ How do I repeat the song I played?\nANS: Click on the 🔁 button."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="◯ How do I Fast forward and fast reverse?\nANS: Click on ⏩ for going 5 seconds forward and ⏪ to go 5 seconds back."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="◯ How do I change the song?\nANS: You can either go back to the list and select any other song or click on the ⏭️ and  ⏮️ buttons to skip to the next and previous songs respectively."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/logored"
+        android:textSize="20dp"
+        android:text="NOTE: The songs that are shown are only detected from the songs present in your device storage."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
+
+
+
+
+</LinearLayout>
