@@ -1,16 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/soundsbasicbg1"
     tools:context=".settingsactivity">
-    
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/settingsrecycle"
-        android:background="@drawable/soundsbasicbg1"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    <LinearLayout
+        android:id="@+id/faqlinearlayout"
+        android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal"
+        android:layout_margin="13dp"
+        android:background="@drawable/customlistview"
+    android:weightSum="4">
+    <ImageView
+        android:id="@+id/imgvsettingitem"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/abouticon"
+
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2.5"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@+id/itemsettingstxtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQ"
+            android:textColor="@color/grey"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:clickable="true"
+            />
+        <TextView
+            android:id="@+id/itemsettingstxtv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need Help?"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutlinearlayout"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_margin="13dp"
+        android:background="@drawable/customlistview"
+        android:weightSum="4">
+        <ImageView
+            android:id="@+id/imgvsettingitemabout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/aboutlogo"
+
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2.5"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/itemsettingstxtvabout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textColor="@color/grey"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="17dp"
+                android:clickable="true"
+                />
+            <TextView
+                android:id="@+id/itemsettingstxtv2about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SoundsBasic 1.0"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    -->
+
+</LinearLayout>

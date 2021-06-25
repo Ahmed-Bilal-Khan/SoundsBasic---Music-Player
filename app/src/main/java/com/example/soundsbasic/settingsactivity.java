@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class settingsactivity extends AppCompatActivity {
+    /*LinearLayout faq,about;*/
+
     RecyclerView recyclerViewsettings;
     LinearLayoutManager layoutManager;
     SettingsRAdapter settingsRAdapter;
@@ -34,6 +36,23 @@ public class settingsactivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.drawable.settingsicongrey);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        /*faq.findViewById(R.id.faqlinearlayout);
+        about.findViewById(R.id.aboutlinearlayout);
+
+        faq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(settingsactivity.this, faqactitvity.class));
+            }
+        });
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(settingsactivity.this, About.class));
+            }
+        }); */
+
         recyclerViewsettings = findViewById(R.id.settingsrecycle);
         settingsList.add(new Settings(R.drawable.abouticon,"FAQ","Need Help?"));
         settingsList.add(new Settings(R.drawable.aboutlogo,"About","SoundsBasic 1.0"));
@@ -44,6 +63,7 @@ public class settingsactivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };*/
+
         settingsRAdapter = new SettingsRAdapter(settingsactivity.this,settingsList);
         recyclerViewsettings.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewsettings.setAdapter(settingsRAdapter);

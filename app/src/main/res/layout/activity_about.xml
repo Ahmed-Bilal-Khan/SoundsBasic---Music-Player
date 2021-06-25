@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/logored"
         android:layout_marginLeft="120dp"
-        android:text="ABOUT"
+        android:text="About"
         android:textStyle="bold"
         />
 
@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:text="⚪ This App is a project Created by Mohid Bin Khalid And Ahmed Bilal Khan of Air University, islamabad for their 4th semester final project."
+        android:text="⚪ This App is a project Created by Ahmed Bilal Khan And MohiddBin Khalid of Air University, islamabad for their 4th semester final project."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:textStyle="italic"
+
         />
 
     <TextView
@@ -38,7 +38,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:textStyle="italic"
+
         />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:textStyle="italic"
+
         />
 
     <TextView
@@ -62,7 +62,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:textStyle="italic"
+
         />
 
     <TextView
@@ -74,7 +74,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:textStyle="italic"
+
         />
 
     <TextView
@@ -85,7 +85,7 @@
         android:text="⚪ The app is planned to be uploaded as soon as it escapes the Beta state."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textStyle="italic"
+
         />
 
 

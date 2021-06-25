@@ -18,12 +18,13 @@ import com.example.soundsbasic.R;
 import java.util.List;
 
 public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.ViewHolder> {
-    Context context;
+    private final Context context;
     List<Settings>settingsList;
    /* private RecyclerViewOnClickListener listener;*/
 
-    public SettingsRAdapter() {
+    public SettingsRAdapter(Context context) {
 
+        this.context = context;
     }
 
     public SettingsRAdapter(Context context, List<Settings> settingsList /*,RecyclerViewOnClickListener listener*/) {
@@ -79,7 +80,19 @@ public class SettingsRAdapter extends RecyclerView.Adapter<SettingsRAdapter.View
 
         @Override
         public void onClick(View v) {
-            /*listener.OnClick(itemView, getAdapterPosition());*/
+            /*final Intent intent;
+            switch (getAdapterPostion()){
+                case 0:
+                    intent =  new Intent(context, faqactivi.class);
+                    break;
+                case 1:
+                    intent =  new Intent(context, SecondActivity.class);
+                    break;
+                default:
+                    intent =  new Intent(context, DefaultActivity.class);
+                    break;
+            }
+            context.startActivity(intent);*/
         }
     }
 }

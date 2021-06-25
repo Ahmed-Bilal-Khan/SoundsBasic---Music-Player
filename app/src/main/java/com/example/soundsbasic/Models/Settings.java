@@ -1,6 +1,8 @@
 package com.example.soundsbasic.Models;
 
-public class Settings {
+import java.io.Serializable;
+
+public class Settings  {
     private int imgv1;
     private String itemname1,itemname2;
 
