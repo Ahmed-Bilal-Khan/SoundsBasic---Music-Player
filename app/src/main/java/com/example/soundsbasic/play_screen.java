@@ -44,6 +44,8 @@ public class play_screen extends AppCompatActivity {
     BarVisualizer visualizer;
     ImageView imageView;
 
+    Animation rotate,rotatereverse;
+
     LinearLayout musiclinearlayout;
     Animation fadein;
     String sname;
@@ -99,6 +101,8 @@ public class play_screen extends AppCompatActivity {
         btnRepeat = findViewById(R.id.BtnRepeat);
 
         fadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fazein);
+        rotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate);
+        rotatereverse = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotatereverse);
         musiclinearlayout.setAnimation(fadein);
 
         if (mediaPlayer != null)
@@ -235,7 +239,7 @@ public class play_screen extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
-                //startAnimation(imageView);
+                imageView.setAnimation(rotate);
 
                 int audiosessionID = mediaPlayer.getAudioSessionId();
                 if (audiosessionID != -1)
@@ -272,7 +276,7 @@ public class play_screen extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
-                //startAnimation(imageView);
+                imageView.setAnimation(rotatereverse);
 
                 int audiosessionID = mediaPlayer.getAudioSessionId();
                 if (audiosessionID != -1)
