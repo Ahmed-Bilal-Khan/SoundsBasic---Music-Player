@@ -54,13 +54,13 @@ public class TracksFragment extends Fragment {
         searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                TracksFragment.customListVAdapter.getFilter().filter(query);
+                customListVAdapter.getFilter().filter(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                TracksFragment.customListVAdapter.getFilter().filter(newText);
+                customListVAdapter.getFilter().filter(newText);
                 return false;
             }
         });*/
@@ -111,8 +111,6 @@ public class TracksFragment extends Fragment {
                 {
                     items[i] = mysongs.get(i).getName().toString().replace(".mp3","").replace(".wav","");
                 }
-        /*ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
-                listView1.setAdapter(myAdapter);*/
 
         customListVAdapter customListVAdapter = new customListVAdapter();
         listView1.setAdapter(customListVAdapter);
@@ -144,7 +142,6 @@ public class TracksFragment extends Fragment {
 
     class customListVAdapter extends BaseAdapter
     {
-
         @Override
         public int getCount() {
             return items.length;
