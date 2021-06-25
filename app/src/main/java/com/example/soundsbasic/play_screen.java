@@ -239,6 +239,7 @@ public class play_screen extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
+
                 imageView.setAnimation(rotate);
 
                 int audiosessionID = mediaPlayer.getAudioSessionId();
@@ -276,6 +277,7 @@ public class play_screen extends AppCompatActivity {
                 txtsname.setText(sname);
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pause_icon);
+
                 imageView.setAnimation(rotatereverse);
 
                 int audiosessionID = mediaPlayer.getAudioSessionId();
