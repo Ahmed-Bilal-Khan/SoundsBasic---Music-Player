@@ -2,19 +2,38 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/soundsbasicbg1"
     android:orientation="vertical"
-    >
+    android:background="@drawable/soundsbasicbg1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FAQ's"
-        android:textColor="@color/logored"
-        android:layout_marginTop="30dp"
         android:textSize="50dp"
-        android:layout_marginLeft="140dp"
-        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/logored"
+        android:layout_marginLeft="120dp"
+        android:text="ABOUT"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="⚪ This App is a project Created by Mohid Bin Khalid And Ahmed Bilal Khan of Air University, islamabad for their 4th semester final project."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="⚪ The App is currently in it's 1.0 Beta State."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         />
 
     <TextView
@@ -22,57 +41,39 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:text="⚪ How do I play/pause a song?\nANS: Click on the song you want to play from the list of songs you are shownfrom your device. to pause it simply press ⏸️ and to play again just press ▶️."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I shuffle?\nANS: Click on the 🔀 button"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I repeat the song I played?\nANS: Click on the 🔁 button."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I Fast forward and fast reverse?\nANS: Click on ⏩ for going 5 seconds forward and ⏪ to go 5 seconds back."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I change the song?\nANS: You can either go back to the list and select any other song or click on the ⏭️ and  ⏮️ buttons to skip to the next and previous songs respectively."
+        android:text="⚪ The features similar Most music players in the app market are implemented in this app using the several methods we have learned throughout the entire course."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/logored"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        android:text="NOTE: The songs that are shown are only detected from the songs present in your device storage."
+        android:text="⚪ The project is submitted and presented to Sir Qasim Riaz and Sir Sibtain Abbas."
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="⚪ plans of updating this app and further improving it along the line are considered."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="⚪ The app is planned to be uploaded as soon as it escapes the Beta state."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
 
 
 
