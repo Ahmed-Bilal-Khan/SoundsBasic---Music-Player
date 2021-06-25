@@ -5,75 +5,221 @@
     android:background="@drawable/soundsbasicbg1"
     android:orientation="vertical"
     >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FAQ's"
-        android:textColor="@color/logored"
-        android:layout_marginTop="30dp"
-        android:textSize="50dp"
-        android:layout_marginLeft="140dp"
-        android:textStyle="bold"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I play/pause a song?\nANS: Click on the song you want to play from the list of songs you are shownfrom your device. to pause it simply press ⏸️ and to play again just press ▶️."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I shuffle?\nANS: Click on the 🔀 button"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I repeat the song I played?\nANS: Click on the 🔁 button."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I Fast forward and fast reverse?\nANS: Click on ⏩ for going 5 seconds forward and ⏪ to go 5 seconds back."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:text="⚪ How do I change the song?\nANS: You can either go back to the list and select any other song or click on the ⏭️ and  ⏮️ buttons to skip to the next and previous songs respectively."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="5dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/logored"
-        android:textSize="20dp"
-        android:text="NOTE: The songs that are shown are only detected from the songs present in your device storage."
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="FAQ's"
+          android:textColor="@color/logored"
+          android:layout_marginTop="30dp"
+          android:textSize="50dp"
+          android:layout_marginLeft="140dp"
+          android:textStyle="bold"
+          />
 
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="⚪ How do I play/pause a song?"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="ANS: Click on the song you want to play from the list of songs you are shown from your device. to pause it simply press ⏸️ and to play again just press ▶️."
+          android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="⚪ How do I shuffle?"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="ANS: Click on the 🔀 button"
+          android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="⚪ How do I repeat the song I played?"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="ANS: Click on the 🔁 button."
+          android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="⚪ How do I Fast forward and fast rev?"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textStyle="bold"
+          android:layout_marginRight="10dp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="ANS: Click on ⏩ for going 5 seconds forward and ⏪ to go 5 seconds back."
+          android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="⚪ How do I change the song?"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:text="ANS: You can either go back to the list and select any other song or click on the ⏭️ and  ⏮️ buttons to skip to the next and previous songs respectively."
+          android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I use the seekbar?"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Drag you finger along the seekbar and stop at any point you want. The song will continue playing from that time stamp."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="⚪ Does the music keep playing while using other apps?"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="Yes, the app runs in the background. You can stop the music either from the notification Bar or by opening the app again and stopping the music."
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="⚪ Will the app be paid or free?"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="The app is planned to be free at the moment, further information will be released once it escapes Beta"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/logored"
+            android:textSize="20dp"
+            android:text="NOTE: The songs that are played in this music player are played from your device storage."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+
+
+    </ScrollView>
 
 </LinearLayout>

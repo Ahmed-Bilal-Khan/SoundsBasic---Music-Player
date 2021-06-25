@@ -30,7 +30,7 @@
             android:textSize="22dp"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
+            android:textStyle="bold|italic"
             />
 
         <ImageView

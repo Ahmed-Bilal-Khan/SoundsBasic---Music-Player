@@ -13,7 +13,8 @@
         android:textColor="@color/logored"
         android:layout_marginLeft="120dp"
         android:text="ABOUT"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +24,9 @@
         android:text="⚪ This App is a project Created by Mohid Bin Khalid And Ahmed Bilal Khan of Air University, islamabad for their 4th semester final project."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,6 +37,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:textStyle="italic"
         />
 
     <TextView
@@ -44,7 +48,9 @@
         android:text="⚪ The features similar Most music players in the app market are implemented in this app using the several methods we have learned throughout the entire course."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +60,9 @@
         android:text="⚪ The project is submitted and presented to Sir Qasim Riaz and Sir Sibtain Abbas."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,7 +72,9 @@
         android:text="⚪ plans of updating this app and further improving it along the line are considered."
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:textStyle="italic"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,8 +83,9 @@
         android:textSize="20dp"
         android:text="⚪ The app is planned to be uploaded as soon as it escapes the Beta state."
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"/>
-
+        android:layout_marginTop="20dp"
+        android:textStyle="italic"
+        />
 
 
 </LinearLayout>
