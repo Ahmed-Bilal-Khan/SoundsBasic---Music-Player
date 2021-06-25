@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -28,7 +30,8 @@ public class settingsactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settingsactivity);
         getSupportActionBar().setTitle("Settings");
-        getSupportActionBar().setIcon(R.drawable.settingsiconred);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#BA4444")));
+        getSupportActionBar().setIcon(R.drawable.settingsicongrey);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerViewsettings = findViewById(R.id.settingsrecycle);

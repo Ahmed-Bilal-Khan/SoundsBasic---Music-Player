@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
 import android.net.Uri;
@@ -60,8 +63,7 @@ public class play_screen extends AppCompatActivity {
     //visualizer not running when no music plays ka check
     @Override
     protected void onDestroy() {
-        if (visualizer != null)
-        {
+        if (visualizer != null) {
             visualizer.release();
         }
         super.onDestroy();
@@ -77,6 +79,8 @@ public class play_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
         getSupportActionBar().setTitle("Now Playing");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#BA4444")));
+        getSupportActionBar().setIcon(R.drawable.musicnotegrey);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         musiclinearlayout = findViewById(R.id.linearlayoutplayer);
