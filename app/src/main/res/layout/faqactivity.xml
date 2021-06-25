@@ -1,30 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/faqid"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/soundsbasicbg1"
     android:orientation="vertical"
-    android:background="@color/black">
-    <TextView
-        android:id="@+id/faqtxtv1"
-        android:layout_margin="10dp"
+    >
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="- How is the Playlists stored?"
-        android:textColor="@color/grey"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        />
-    <TextView
-        android:id="@+id/faqtxtv2"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BlackPlayer always tries its best to keep a backup of your Playlists as .m3ubackup files stored in the BlackPlayer/Playlists folder.
-If you are using the 'Build in Android library' the Playlists are stored in a database on your phone, which your phone manages.
-If you are using 'BlackPlayer Custom Library', the playlists are stored in the app. If you clear the App-data of BlackPlayer these playlists might be lost if there is no external m3u playlist file or m3uBackup file.
-Check which Audio library you are using in Metadata Settings category."
-        android:textColor="@color/grey"
-        android:textSize="15dp"
-        />
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAQ's"
+            android:textColor="@color/logored"
+            android:layout_marginTop="30dp"
+            android:textSize="50dp"
+            android:layout_marginLeft="140dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I play/pause a song?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Click on the song you want to play from the list of songs you are shown from your device. to pause it simply press ⏸️ and to play again just press ▶️."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I shuffle?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Click on the 🔀 button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I repeat the song I played?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Click on the 🔁 button."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I Fast forward and fast rev?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Click on ⏩ for going 5 seconds forward and ⏪ to go 5 seconds back."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I change the song?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: You can either go back to the list and select any other song or click on the ⏭️ and  ⏮️ buttons to skip to the next and previous songs respectively."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="⚪ How do I use the seekbar?"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="ANS: Drag you finger along the seekbar and stop at any point you want. The song will continue playing from that time stamp."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="⚪ Does the music keep playing while using other apps?"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="Yes, the app runs in the background. You can stop the music either from the notification Bar or by opening the app again and stopping the music."
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="⚪ Will the app be paid or free?"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="The app is planned to be free at the moment, further information will be released once it escapes Beta"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/logored"
+            android:textSize="20dp"
+            android:text="NOTE: The songs that are played in this music player are played from your device storage."
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+
+
+    </ScrollView>
 
 </LinearLayout>

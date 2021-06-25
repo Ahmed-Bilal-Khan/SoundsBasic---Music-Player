@@ -13,8 +13,7 @@ public class faqactitvity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.faqactivity);
-            TextView txtviewQ1 = findViewById(R.id.faqtxtv1);
-            TextView txtviewQ2 = findViewById(R.id.faqtxtv2);
+
 
         }
     }
